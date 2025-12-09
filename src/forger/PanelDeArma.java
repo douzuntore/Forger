@@ -16,6 +16,8 @@ public class PanelDeArma extends javax.swing.JPanel {
     public PanelDeArma(Arma arma) {
         initComponents();
         this.nombre.setText(arma.getName());
+        this.daño.setText(""+arma.getDamage());
+        
     }
 
     /**
@@ -28,29 +30,47 @@ public class PanelDeArma extends javax.swing.JPanel {
     private void initComponents() {
 
         nombre = new javax.swing.JLabel();
+        dañoLabel = new javax.swing.JLabel();
+        daño = new javax.swing.JLabel();
 
         nombre.setText("nombre");
+
+        dañoLabel.setText("Daño:");
+
+        daño.setText("daño");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(45, 45, 45)
+                .addGap(75, 75, 75)
                 .addComponent(nombre)
-                .addContainerGap(311, Short.MAX_VALUE))
+                .addContainerGap(281, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(daño)
+                    .addComponent(dañoLabel))
+                .addGap(77, 77, 77))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(28, 28, 28)
+                .addGap(27, 27, 27)
                 .addComponent(nombre)
-                .addContainerGap(255, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(dañoLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(daño)
+                .addContainerGap(198, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel daño;
+    private javax.swing.JLabel dañoLabel;
     public javax.swing.JLabel nombre;
     // End of variables declaration//GEN-END:variables
 }

@@ -52,7 +52,12 @@ public class ManejoDeMenus {
     
     public void agregarArmas (JTabbedPane tabbed, Arsenal armas) {
         
-        
+        for (int i = 0; i < armas.getArsenalDeArmas().size(); i++) {
+            
+            JPanel panelDeArma = new PanelDeArma(armas.getArsenalDeArmas().get(i));
+            tabbed.add(panelDeArma);
+            
+        }
         
     }
 

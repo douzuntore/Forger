@@ -40,6 +40,13 @@ public class Armas extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
         setSize(800,600);
+        addWindowFocusListener(new java.awt.event.WindowFocusListener() {
+            public void windowGainedFocus(java.awt.event.WindowEvent evt) {
+                formWindowGainedFocus(evt);
+            }
+            public void windowLostFocus(java.awt.event.WindowEvent evt) {
+            }
+        });
 
         fondo.setBackground(new java.awt.Color(0, 0, 0));
         fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -107,6 +114,12 @@ public class Armas extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowGainedFocus(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowGainedFocus
+        // TODO add your handling code here:
+        new ManejoDeMenus().agregarArmas(this.jTabbedPane1, Forger.arsenalArmas);
+        
+    }//GEN-LAST:event_formWindowGainedFocus
 
     /**
      * @param args the command line arguments

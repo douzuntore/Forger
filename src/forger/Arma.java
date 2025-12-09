@@ -76,5 +76,17 @@ public class Arma {
 
     public Arma() {
     }
+
+    public Arma(String name, int type, int damage, int speed, int material, int handle, int quality) {
+        this.name = name;
+        this.type = type;
+        this.damage = damage;
+        this.speed = speed;
+        this.material = material;
+        this.handle = handle;
+        this.quality = quality;
+    }
+    
+    
     
 }
