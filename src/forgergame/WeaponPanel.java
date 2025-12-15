@@ -127,7 +127,7 @@ public class WeaponPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         for (int w = 0; w < Data.equipado.length; w++) {
             if (Data.equipado[w] == null) {
-                System.out.println(Data.equipado[w]);
+                //System.out.println(Data.equipado[w]);
                 
                 if (w == 0) {
                     if (Data.equipado[1] != null) {

@@ -97,7 +97,7 @@ public class Frame extends javax.swing.JFrame {
         //</editor-fold>
         
         
-        Data.armas.add(new Weapon("Espada",15,100,10,15));
+        /*Data.armas.add(new Weapon("Espada",15,100,10,15));
         Data.armas.add(new Weapon("Arco",20,75,4,18));
         Data.armas.add(new Weapon("Daga",5,30,4,40));
         Data.armas.add(new Weapon("Escudo",10,120,50,10));
@@ -108,7 +108,19 @@ public class Frame extends javax.swing.JFrame {
         Data.armas.add(new Weapon("Espada",15,100,10,15));
         Data.armas.add(new Weapon("Arco",20,75,4,18));
         Data.armas.add(new Weapon("Daga",5,30,4,40));
-        Data.armas.add(new Weapon("Escudo",10,120,50,10));
+        Data.armas.add(new Weapon("Escudo",10,120,50,10));*/
+        
+        /*Data.mangos.add(new Grip("Agarre normal",2,2,2,110,105,105));
+        Data.mangos.add(new Grip("Agarre verde",2,4,2,105,120,105));
+        Data.mangos.add(new Grip("Agarre rojo",5,2,1,125,100,90));
+        Data.mangos.add(new Grip("Agarre normal",2,2,2,110,105,105));
+        Data.mangos.add(new Grip("Agarre verde",2,4,2,105,120,105));
+        Data.mangos.add(new Grip("Agarre rojo",5,2,1,125,100,90));*/
+        Data.mangos.add(new Grip("Agarre normal",0,0,0,100,100,100));
+        
+        Data.encantamientos.add("Crecimiento");
+        Data.encantamientos.add("Enfoque");
+        Data.encantamientos.add("Perforacion");
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new Frame().setVisible(true));
         

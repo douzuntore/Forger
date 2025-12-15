@@ -8,14 +8,16 @@ package forgergame;
  *
  * @author samuelzun
  */
-public class WeaponSelec extends javax.swing.JPanel {
+public class Forjar extends javax.swing.JPanel {
 
     /**
      * Creates new form WeaponSelec
      */
-    public WeaponSelec(Frame frame) {
+    public Forjar(Frame frame) {
         initComponents();
-        MetodosGUI.mostrarPanelW(jPanel1, jScrollPane1, primLb, secunLb);
+        forgePanel.setVisible(false);
+        MetodosGUI.mostrarGripScrollPane(jPanel8, jScrollPane2, this);
+        MetodosGUI.mostrarEnchantScrollPane(jPanel1, jScrollPane1, this);
         parentFrame = frame;
     }
 
@@ -31,100 +33,466 @@ public class WeaponSelec extends javax.swing.JPanel {
         title = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel1 = new javax.swing.JPanel();
-        primLb = new javax.swing.JPanel();
-        secunLb = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        startForgeButton = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        maderaButton = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        hierroButton = new javax.swing.JButton();
+        jPanel5 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        topacioButton = new javax.swing.JButton();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        diamanteButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jPanel8 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        forgePanel = new javax.swing.JPanel();
+        espada = new javax.swing.JButton();
+        arco = new javax.swing.JButton();
+        daga = new javax.swing.JButton();
+        escudo = new javax.swing.JButton();
+        maza = new javax.swing.JButton();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 0, 0));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         title.setFont(new java.awt.Font("Papyrus", 1, 48)); // NOI18N
         title.setForeground(new java.awt.Color(255, 204, 153));
         title.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        title.setText("SELECCIONAR ARMAS");
+        title.setText("FORJAR ARMA");
+        add(title, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 6, 580, 78));
 
         jScrollPane1.setBackground(new java.awt.Color(255, 204, 153));
         jScrollPane1.setForeground(new java.awt.Color(102, 102, 102));
 
-        jPanel1.setBackground(new java.awt.Color(63, 41, 19));
+        jPanel1.setBackground(new java.awt.Color(49, 19, 63));
         jPanel1.setForeground(new java.awt.Color(102, 102, 0));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 562, Short.MAX_VALUE)
+            .addGap(0, 450, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGap(0, 82, Short.MAX_VALUE)
         );
 
         jScrollPane1.setViewportView(jPanel1);
 
-        primLb.setBackground(new java.awt.Color(14, 14, 14));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 410, 410, 100));
 
-        javax.swing.GroupLayout primLbLayout = new javax.swing.GroupLayout(primLb);
-        primLb.setLayout(primLbLayout);
-        primLbLayout.setHorizontalGroup(
-            primLbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 186, Short.MAX_VALUE)
-        );
-        primLbLayout.setVerticalGroup(
-            primLbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
+        jButton1.setBackground(new java.awt.Color(63, 41, 19));
+        jButton1.setFont(new java.awt.Font("Papyrus", 1, 15)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 204, 153));
+        jButton1.setText("<<");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(15, 532, 50, -1));
 
-        secunLb.setBackground(new java.awt.Color(14, 14, 14));
+        startForgeButton.setBackground(new java.awt.Color(63, 41, 19));
+        startForgeButton.setFont(new java.awt.Font("Papyrus", 1, 24)); // NOI18N
+        startForgeButton.setForeground(new java.awt.Color(255, 204, 153));
+        startForgeButton.setText("FORJAR");
+        startForgeButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                startForgeButtonActionPerformed(evt);
+            }
+        });
+        add(startForgeButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(338, 518, 145, -1));
 
-        javax.swing.GroupLayout secunLbLayout = new javax.swing.GroupLayout(secunLb);
-        secunLb.setLayout(secunLbLayout);
-        secunLbLayout.setHorizontalGroup(
-            secunLbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 186, Short.MAX_VALUE)
-        );
-        secunLbLayout.setVerticalGroup(
-            secunLbLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 186, Short.MAX_VALUE)
-        );
+        jPanel2.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(title, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addComponent(primLb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(67, 67, 67)
-                        .addComponent(secunLb, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(99, 99, 99))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+        jPanel3.setBackground(new java.awt.Color(102, 51, 0));
+
+        jLabel1.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        jLabel1.setText("Madera");
+
+        maderaButton.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        maderaButton.setText("Usar");
+        maderaButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maderaButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(title, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(46, 46, 46)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(secunLb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(primLb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addComponent(maderaButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(maderaButton)
+                .addContainerGap())
+        );
+
+        jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, 100));
+
+        jPanel4.setBackground(new java.awt.Color(102, 102, 102));
+
+        jLabel2.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        jLabel2.setText("Hierro");
+
+        hierroButton.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        hierroButton.setText("Usar");
+        hierroButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hierroButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(14, 14, 14)
+                        .addComponent(jLabel2))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(hierroButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(31, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(hierroButton)
+                .addContainerGap())
+        );
+
+        jPanel2.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, 100, -1));
+
+        jPanel5.setBackground(new java.awt.Color(255, 153, 0));
+
+        jLabel3.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel3.setText("Topacio");
+
+        topacioButton.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        topacioButton.setText("Usar");
+        topacioButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                topacioButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(topacioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(35, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(topacioButton)
+                .addContainerGap())
+        );
+
+        jPanel2.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, -1, -1));
+
+        jPanel6.setBackground(new java.awt.Color(0, 204, 204));
+
+        jLabel4.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel4.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel4.setText("Diamante");
+
+        diamanteButton.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        diamanteButton.setText("Usar");
+        diamanteButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                diamanteButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(diamanteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(42, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
+                .addComponent(diamanteButton)
+                .addContainerGap())
+        );
+
+        jPanel2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 0, -1, -1));
+
+        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 110, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 204, 153));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 90, 180, 20));
+
+        jLabel6.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 204, 153));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 510, 230, -1));
+
+        jScrollPane2.setBackground(new java.awt.Color(255, 204, 153));
+        jScrollPane2.setForeground(new java.awt.Color(102, 102, 102));
+
+        jPanel8.setBackground(new java.awt.Color(63, 41, 19));
+        jPanel8.setForeground(new java.awt.Color(102, 102, 0));
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 600, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 157, Short.MAX_VALUE)
+        );
+
+        jScrollPane2.setViewportView(jPanel8);
+
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 230, 500, 175));
+
+        jLabel7.setFont(new java.awt.Font("Papyrus", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 204, 153));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, 240, -1));
+
+        forgePanel.setBackground(new java.awt.Color(51, 51, 51));
+
+        espada.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        espada.setText("Espada");
+        espada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                espadaActionPerformed(evt);
+            }
+        });
+
+        arco.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        arco.setText("Arco");
+
+        daga.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        daga.setText("Daga");
+
+        escudo.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        escudo.setText("Escudo");
+
+        maza.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        maza.setText("Maza");
+
+        javax.swing.GroupLayout forgePanelLayout = new javax.swing.GroupLayout(forgePanel);
+        forgePanel.setLayout(forgePanelLayout);
+        forgePanelLayout.setHorizontalGroup(
+            forgePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(forgePanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(forgePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(espada)
+                    .addComponent(daga)
+                    .addComponent(maza)
+                    .addComponent(escudo)
+                    .addComponent(arco))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        forgePanelLayout.setVerticalGroup(
+            forgePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(forgePanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(espada)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(daga)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(arco)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(escudo)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(maza))
+        );
+
+        add(forgePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 260, 90, 180));
+
+        jTextField1.setBackground(new java.awt.Color(51, 51, 51));
+        jTextField1.setForeground(new java.awt.Color(255, 204, 153));
+        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 490, 220, -1));
+
+        jLabel8.setFont(new java.awt.Font("Papyrus", 0, 13)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 204, 153));
+        jLabel8.setText("Nombre del arma:");
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 470, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        for (int w = 0; w < Data.equipado.length; w++) {
+            Data.equipado[w] = null;
+        }
+        MetodosGUI.mostrarPanel(new WeaponSelec(parentFrame), parentFrame.getMainPanel());
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void startForgeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_startForgeButtonActionPerformed
+        // TODO add your handling code here:
+        if (material != -1 && jTextField1.getText().length() != 0 && agarre != null) {
+            forgePanel.setVisible(true);
+            switch (encantamiento) {
+                case "Crecimiento","Enfoque","":
+                    espada.setVisible(true);
+                    arco.setVisible(true);
+                    daga.setVisible(true);
+                    escudo.setVisible(true);
+                    maza.setVisible(true);
+                    break;
+                case "Perforacion","Parry":
+                    espada.setVisible(true);
+                    arco.setVisible(false);
+                    daga.setVisible(false);
+                    escudo.setVisible(false);
+                    maza.setVisible(false);
+                    break;
+                case "Tiro triple","Ricochet":
+                    espada.setVisible(false);
+                    arco.setVisible(true);
+                    daga.setVisible(false);
+                    escudo.setVisible(false);
+                    maza.setVisible(false);
+                    break;
+                case "Doble ataque","Triple ataque":
+                    espada.setVisible(false);
+                    arco.setVisible(false);
+                    daga.setVisible(true);
+                    escudo.setVisible(false);
+                    maza.setVisible(false);
+                    break;
+                case "Empuje","Acumulación":
+                    espada.setVisible(false);
+                    arco.setVisible(false);
+                    daga.setVisible(false);
+                    escudo.setVisible(true);
+                    maza.setVisible(false);
+                    break;
+                case "Impacto","Giro":
+                    espada.setVisible(false);
+                    arco.setVisible(false);
+                    daga.setVisible(false);
+                    escudo.setVisible(false);
+                    maza.setVisible(true);
+                    break;
+            }
+        }
+        
+    }//GEN-LAST:event_startForgeButtonActionPerformed
+
+    private void maderaButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maderaButtonActionPerformed
+        // TODO add your handling code here:
+        material = 0;
+        jLabel5.setText("Usando: "+Data.MATERIALS[material]);
+    }//GEN-LAST:event_maderaButtonActionPerformed
+
+    private void hierroButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hierroButtonActionPerformed
+        // TODO add your handling code here:
+        material = 1;
+        jLabel5.setText("Usando: "+Data.MATERIALS[material]);
+    }//GEN-LAST:event_hierroButtonActionPerformed
+
+    private void topacioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_topacioButtonActionPerformed
+        // TODO add your handling code here:
+        material = 2;
+        jLabel5.setText("Usando: "+Data.MATERIALS[material]);
+    }//GEN-LAST:event_topacioButtonActionPerformed
+
+    private void diamanteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_diamanteButtonActionPerformed
+        // TODO add your handling code here:
+        material = 3;
+        jLabel5.setText("Usando: "+Data.MATERIALS[material]);
+    }//GEN-LAST:event_diamanteButtonActionPerformed
+
+    private void espadaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_espadaActionPerformed
+        // TODO add your handling code here:
+        Data.armas.add(new Weapon(jTextField1.getText(),material,agarre,encantamiento,"Espada"));
+        MetodosGUI.mostrarPanel(new WeaponSelec(parentFrame), parentFrame.getMainPanel());
+        
+    }//GEN-LAST:event_espadaActionPerformed
+
     private Frame parentFrame;
+    protected int material = -1;
+    protected Grip agarre;
+    protected String tipo;
+    protected String encantamiento = "";
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton arco;
+    private javax.swing.JButton daga;
+    private javax.swing.JButton diamanteButton;
+    private javax.swing.JButton escudo;
+    private javax.swing.JButton espada;
+    protected javax.swing.JPanel forgePanel;
+    private javax.swing.JButton hierroButton;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    protected javax.swing.JLabel jLabel6;
+    protected javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JPanel primLb;
-    private javax.swing.JPanel secunLb;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JButton maderaButton;
+    private javax.swing.JButton maza;
+    private javax.swing.JButton startForgeButton;
     private javax.swing.JLabel title;
+    private javax.swing.JButton topacioButton;
     // End of variables declaration//GEN-END:variables
 }
